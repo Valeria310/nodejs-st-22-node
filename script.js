@@ -21,7 +21,11 @@ pipeline(
                 delete jsonObj[oldKeys[i]];
             }
             for (let i = 0; i < newKeys.length; i++) {
-                jsonObj[newKeys[i].toLowerCase()] = values[i];
+                if (newKeys[i].toLowerCase() === 'price' || newKeys[i].toLowerCase() === 'amount') {
+                    jsonObj[newKeys[i].toLowerCase()] = Number(values[i]);
+                } else {
+                    jsonObj[newKeys[i].toLowerCase()] = values[i];
+                }
             }
             resolve();
         });
