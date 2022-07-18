@@ -20,5 +20,8 @@
     "homepage": "https://github.com/Valeria310/nodejs-st-22-node#readme",
     "dependencies": {
         "csvtojson": "^2.0.10"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.19"
     }
 }
