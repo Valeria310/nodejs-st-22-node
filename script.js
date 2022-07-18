@@ -4,12 +4,6 @@ const { pipeline, Transform } = require('stream');
 
 const pathToCsv = './csv/nodejs-hw1-ex1.csv';
 
-const a = new Transform({
-    transform(ch, code, callb) {
-        callb();
-    },
-});
-
 pipeline(
     fs.createReadStream(pathToCsv),
     csv().subscribe((jsonObj) => {
